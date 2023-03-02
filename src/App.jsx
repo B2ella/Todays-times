@@ -1,23 +1,29 @@
 import Preloader from './Component/Preloader/Preloader'
-import styled from 'styled-components';
+import { StylesContainer, Heading, Container } from './AppStyles';
 import Header from './Component/Header/Header';
+import TheSearch from './Component/Search/Search';
+import NewsArticles from './Component/News/News';
 
 
-const StylesContainer = styled.div`
-  background-color: #232C2B;
-        height: 100vh;
-        width: 100vw;`
 
 function App() {
 
 
   return (
+
+
     <StylesContainer>
+     <Preloader/>
+     <Header/>
+    <Heading>Todays<br/> Time</Heading>
     
-    <Preloader/>
-    <Header/>
+    <Container>
+   <TheSearch/>
+   <NewsArticles/>
+    </Container> 
     
     </StylesContainer>
+    
   )
 }
 
